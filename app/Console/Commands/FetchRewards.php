@@ -14,7 +14,7 @@ class FetchRewards extends Command
      *
      * @var string
      */
-    protected $signature = 'rewards:fetch';
+    protected $signature = 'fetch:rewards';
 
     /**
      * The console command description.

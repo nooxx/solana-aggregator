@@ -13,7 +13,7 @@ class FetchStakes extends Command
      *
      * @var string
      */
-    protected $signature = 'stakes:fetch';
+    protected $signature = 'fetch:stakes';
 
     /**
      * The console command description.

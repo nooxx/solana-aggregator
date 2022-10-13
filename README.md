@@ -13,12 +13,12 @@ php artisan migrate
 ## Fetching stakes on given vote account
 This command fetches stakes made on vote account specified in the environment **SOLANA_VOTE_ACCOUNT** and store the stakes in the DB stakes table.
 ```
-php artisan stakes:fetch
+php artisan fetch:stakes
 ```
 
 ## Fetching historical rewards for stakes
 This command fetches rewards per epoch for all stakes in DB and store them in the DB table rewards.
 ```
-php artisan rewards:fetch
+php artisan fetch:rewards
 ```
 
