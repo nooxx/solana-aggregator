@@ -30,7 +30,7 @@ class FetchStakes extends Command
     public function handle()
     {
         // Fetch stakes on our vote account
-        $stakeAccountsResponse = Http::post('https://api.devnet.solana.com', [
+        $stakeAccountsResponse = Http::post(env('SOLANA_RPC'), [
             'jsonrpc' => '2.0',
             'id' => 1,
             'method' => 'getProgramAccounts',
@@ -51,7 +51,7 @@ class FetchStakes extends Command
 
         // Fetch stake's state and store or update stake in DB
         foreach ($stakeAccounts as $stakeAccount) {
-            $stateResponse = Http::post('https://api.devnet.solana.com', [
+            $stateResponse = Http::post(env('SOLANA_RPC'), [
                 'jsonrpc' => '2.0',
                 'id' => 1,
                 'method' => 'getStakeActivation',

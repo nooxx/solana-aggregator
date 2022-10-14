@@ -31,7 +31,7 @@ class FetchRewards extends Command
     public function handle()
     {
         // Fetch current epoch
-        $epochResponse = Http::post('https://api.devnet.solana.com', [
+        $epochResponse = Http::post(env('SOLANA_RPC'), [
             'jsonrpc' => '2.0',
             'id' => 1,
             'method' => 'getEpochInfo',
@@ -44,7 +44,7 @@ class FetchRewards extends Command
             $epoch = (int)$stake->activationEpoch;
             while ($epoch < $currentEpoch) {
                 $this->info("Fetching rewards for $stake->pubkey at epoch $epoch");
-                $rewardResponse = Http::post('https://api.devnet.solana.com', [
+                $rewardResponse = Http::post(env('SOLANA_RPC'), [
                     'jsonrpc' => '2.0',
                     'id' => 1,
                     'method' => 'getInflationReward',
