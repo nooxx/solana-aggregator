@@ -1,6 +1,6 @@
 # Laravel Solana aggregator
 
-This is a simple laravel project that allows to fetch stakes and historical rewards on a given solana vote account (only on devnet now).
+This is a simple laravel project that allows to fetch stakes and historical rewards on a given solana vote account.
 
 ## Getting started
 Install dependencies, create a new DB, setup your env variables, migrate the DB and you're good to go
